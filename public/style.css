@@ -1,0 +1,57 @@
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: white;
+  color: black;
+  background: none;
+  float: left;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: thick solid;
+  outline: none;
+  cursor: pointer;
+  padding: 30px 20px;
+  font: 30px Helvetica;
+  width: 20%;
+  border-width: thick;
+}
+
+.tablink-active {
+  background-color: white;
+  color: black;
+  background: none;
+  float: left;
+  border-top: thick solid;
+  border-left: thick solid;
+  border-right: thick solid;
+  border-bottom: none;
+  outline: none;
+  cursor: pointer;
+  padding: 30px 20px;
+  font: 30px Helvetica;
+  width: 20%;
+  border-width: thick;
+}
+
+.active {
+  border-top: thick solid;
+  border-left: thick solid;
+  border-right: thick solid;
+  border-bottom: none;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 150px 115px;
+  height: 100%;
+  font: 30px Helvetica;
+}

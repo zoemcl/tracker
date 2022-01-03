@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+<button class="tablink active" onclick="openPage('Add', this)" id="defaultOpen">add</button>
+<button class="tablink" onclick="openPage('Books', this)">books</button>
+<button class="tablink" onclick="openPage('Movies', this)">movies</button>
+<button class="tablink" onclick="openPage('TV', this)">TV</button>
+<button class="tablink" onclick="openPage('Podcasts', this)">podcasts</button>
+
+<div id="Add" class="tabcontent">
+  <h3>a place to track everything I'm consuming.</h3>
+  <p>add something below.</p>
+  <div>
+      <select id="typeselect" name="type">
+        <option selected value="def">Select Type</option>
+        <option value="book">Book</option>
+        <option value="movie">Movie</option>
+        <option value="tv">TV</option>
+        <option value="podcast">Podcast</option>
+      </select>
+  </div>
+
+  <div id="result">
+    
+  </div>
+
+</div>
+
+<div id="Books" class="tabcontent">
+  <h3>Books</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Movies" class="tabcontent">
+  <h3>Movies</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="TV" class="tabcontent">
+  <h3>TV</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Podcasts" class="tabcontent">
+    <h3>Podcasts</h3>
+    <p>Who we are and what we do.</p>
+</div>
+
+<script>
+
+function openPage(pageName,elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  document.getElementById(pageName).style.display = "block";
+
+  btns = document.getElementsByClassName("tablink");
+
+    // Loop through the buttons and add the active class to the current/clicked button
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+} 
+
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+$("#typeselect").val("def");
+
+//load forms
+$("#typeselect").change(function(){ 
+        console.log($('#typeselect').val());
+
+        $("#result").load("forms.html #" + $('#typeselect').val());
+    });
+</script>
+   
+</body>
+</html> 
