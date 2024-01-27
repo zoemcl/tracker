@@ -1,0 +1,55 @@
+
+
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tracker</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script type="text/javascript" src="./script.js"></script>
+    </head>
+    <body>
+    
+    <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'Home')">Home</button>
+            <button class="tablinks" onclick="openTab(event, 'Books'), displayCsv('./data/books.csv', 'BookTable', `<th>Title</th><th>Writer</th><th>Review</th><th>Score</th><th>Date Started</th><th>Date Finished</th>`)">Books</button>
+            <button class="tablinks" onclick="openTab(event, 'Movies'), displayCsv('./data/movies.csv', 'MovieTable', `<th>Title</th><th>Director</th><th>Review</th><th>Score</th><th>Date Watched</th>`)">Movies</button>
+            <button class="tablinks" onclick="openTab(event, 'TV'), displayCsv('./data/tv.csv', 'TvTable', `<th>Title</th><th>Season</th><th>Review</th><th>Score</th><th>Date Started</th><th>Date Finished</th>`)">TV</button>
+            <button class="tablinks" onclick="openTab(event, 'Podcasts'), displayCsv('./data/podcasts.csv', 'PodcastTable', `<th>Show</th><th>Episode</th><th>Review</th><th>Score</th><th>Date Listened</th>`)">Podcasts</button>
+            <button class="tablinks" onclick="openTab(event, 'Other'), displayCsv('./data/other.csv', 'OtherTable', `<th>Title</th><th>Review</th><th>Score</th><th>Date</th>`)">Other</button>
+
+        </div>
+        
+         <!-- Tab content  -->
+        <div id="Home" class="tabcontent" style="display: block;">
+            <h3>A basic tracker to log everything I've been consuming since 2024</h3>
+        </div>
+        
+        <div id="Books" class="tabcontent">
+            <table id="BookTable">
+            </table>
+        </div>
+        
+        <div id="Movies" class="tabcontent">
+            <table id="MovieTable">
+            </table>
+        </div> 
+
+        <div id="TV" class="tabcontent">
+            <table id="TvTable">
+            </table>
+        </div> 
+
+        <div id="Podcasts" class="tabcontent">
+            <table id="PodcastTable">
+            </table>   
+        </div>
+
+        <div id="Other" class="tabcontent">
+            <table id="OtherTable">
+            </table>
+        </div>
+    </body>
+  </html> 
