@@ -18,7 +18,7 @@
             <button class="tablinks" onclick="openTab(event, 'Movies'), displayCsv('./data/movies.csv', 'MovieTable', `<th>Title</th><th>Director</th><th>Review</th><th>Score</th><th>Date Watched</th>`)">Movies</button>
             <button class="tablinks" onclick="openTab(event, 'TV'), displayCsv('./data/tv.csv', 'TvTable', `<th>Title</th><th>Season</th><th>Review</th><th>Score</th><th>Date Started</th><th>Date Finished</th>`)">TV</button>
             <button class="tablinks" onclick="openTab(event, 'Podcasts'), displayCsv('./data/podcasts.csv', 'PodcastTable', `<th>Show</th><th>Episode</th><th>Review</th><th>Score</th><th>Date Listened</th>`)">Podcasts</button>
-            <button class="tablinks" onclick="openTab(event, 'Other'), displayCsv('./data/other.csv', 'OtherTable', `<th>Title</th><th>Review</th><th>Score</th><th>Date</th>`)">Other</button>
+            <button class="tablinks" onclick="openTab(event, 'Games'), displayCsv('./data/games.csv', 'GamesTable', `<th>Title</th><th>Review</th><th>Score</th><th>Date</th>`)">Other</button>
 
         </div>
         
@@ -47,8 +47,8 @@
             </table>   
         </div>
 
-        <div id="Other" class="tabcontent">
-            <table id="OtherTable">
+        <div id="Games" class="tabcontent">
+            <table id="GamesTable">
             </table>
         </div>
     </body>
